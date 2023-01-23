@@ -1,0 +1,20 @@
+@media(max-width: 500px){
+    body {
+        margin: 10px;
+    }
+    .formulario{
+        width: 80%;
+        margin: 10px auto;
+        font-size: 15px;
+    }
+    .formulario h1{
+        font-size: 20px;
+    }
+    .formulario p{
+        font-size: 15px;
+        line-height: 20px;
+    }
+    .botao {
+        padding: 5px 20px 5px 20px;
+    }
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/styles.css">
+    <link rel="stylesheet" href="./src/responsive.css">
+    <title>Formulário Padrão HTML SEM Javascript</title>
+    
+</head>
+<body>
+    <form class="formulario" action="mailto:teste@teste.com" method="post" enctype="text/plain" name="Cadastro">
+        <h1>Formulário Simples de Cadastro</h1>
+        <hr><br>
+        <script>
+            nome1=window.prompt ("Qual seu nome?")
+            if (nome1!=null && nome1!="") {
+                document.write("Olá, "+nome1+"!")
+            }
+            else {
+                document.write ("Olá, Visitante!")
+            }
+        </script>
+        <p>Por favor preencha os campos abaixo e clique no botão enviar. Caso precise apagar os dados, dê um clique no botão limpar. <br> Muito obrigado! <br><br></p>
+        Nome completo: <br> <input class="campo" type="text" name="nome" size="35"> <br>
+        Seu email:  <br><input class="campo" type="text" name="email" size="35"><br>
+
+        Sexo: <br>
+        <input type="radio" name="sexo" value="f">Feminino <br>
+        <input type="radio" name="sexo" value="m">Masculino <br><br>
+        Estado civil: <br>
+        <input type="radio" name="civil" value="s">Solteiro <br>
+        <input type="radio" name="civil" value="c">Casado <br>
+        <input type="radio" name="civil" value="d">Divorciado <br>
+        <input type="radio" name="civil" value="v">Viúvo <br><br>
+        Bens que possui: <br>
+        <input type="checkbox" name="bens" value="c">Casa <br>
+        <input type="checkbox" name="bens" value="a">Automóvel <br>
+        <input type="checkbox" name="bens" value="m">Motocicleta <br><br>
+        Faixa de idade:
+        <select name="faixaidade">
+            <option value="3a10">3 a 10 anos</option>
+            <option value="11a25">11 a 25 anos</option>
+            <option value="26a35">26 a 35 anos</option>
+            <option value="36a55">36 a 55 anos</option>
+            <option value="56a90">56 a 90 anos</option>
+        </select><br>
+        Hobby preferido:
+        <select name="hobby">
+            <option value="livros">Ler livros</option>
+            <option value="musica">Ouvir música</option>
+            <option value="cinema">Assistir filmes</option>
+            <option value="esportes">Praticar esportes</option>
+            <option value="games">Jogar games</option>
+        </select><br><br>
+        Observações gerais: <br>
+        <textarea class="campo" name="observacoes" id="" cols="60" rows="5"></textarea><br>
+        <input class="botao" type="submit" value="Enviar os dados" onClick="validar();">
+        <input class="botao" type="reset" value="Limpar os dados">
+
+    </form>
+    <script>
+        function validar(){
+            if (document.cadastro.nome.value == "")
+            {
+                window.alert("Você deve preencher o campo nome");
+                document.cadastro.nome.focus()
+                return false;
+            }
+            if (document.cadastro.observacoes.value == "")
+            window.alert("Você deve colocar alguma observação")
+            document.cadastro.observacoes.focus()
+            return false;
+        }
+    </script>
+</body>
+</html>
