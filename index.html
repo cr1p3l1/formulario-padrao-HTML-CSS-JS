@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./src/styles.css">
-    <link rel="stylesheet" href="./src/responsive.css">
+    <link rel="stylesheet" href="./src//css/styles.css">
+    <link rel="stylesheet" href="./src//css/responsive.css">
     <title>Formulário Padrão HTML SEM Javascript</title>
     
 </head>
@@ -13,14 +13,8 @@
     <form class="formulario" action="mailto:teste@teste.com" method="post" enctype="text/plain" name="Cadastro">
         <h1>Formulário Simples de Cadastro</h1>
         <hr><br>
-        <script>
-            nome1=window.prompt ("Qual seu nome?")
-            if (nome1!=null && nome1!="") {
-                document.write("Olá, "+nome1+"!")
-            }
-            else {
-                document.write ("Olá, Visitante!")
-            }
+        <script src="./src/js/welcome.js">
+           
         </script>
         <p>Por favor preencha os campos abaixo e clique no botão enviar. Caso precise apagar os dados, dê um clique no botão limpar. <br> Muito obrigado! <br><br></p>
         Nome completo: <br> <input class="campo" type="text" name="nome" size="35"> <br>
@@ -60,19 +54,5 @@
         <input class="botao" type="reset" value="Limpar os dados">
 
     </form>
-    <script>
-        function validar(){
-            if (document.cadastro.nome.value == "")
-            {
-                window.alert("Você deve preencher o campo nome");
-                document.cadastro.nome.focus()
-                return false;
-            }
-            if (document.cadastro.observacoes.value == "")
-            window.alert("Você deve colocar alguma observação")
-            document.cadastro.observacoes.focus()
-            return false;
-        }
-    </script>
 </body>
 </html>
